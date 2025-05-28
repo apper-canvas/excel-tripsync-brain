@@ -4,6 +4,8 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Home from './pages/Home'
 import InvitePage from './pages/InvitePage'
+import JoinTripPage from './pages/JoinTripPage'
+
 
 import NotFound from './pages/NotFound'
 
@@ -16,6 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home darkMode={darkMode} setDarkMode={setDarkMode} />} />
           <Route path="/invite" element={<InvitePage darkMode={darkMode} setDarkMode={setDarkMode} />} />
+          <Route path="/join-trip/:tripId" element={<JoinTripPage darkMode={darkMode} setDarkMode={setDarkMode} />} />
+
 
           <Route path="*" element={<NotFound />} />
         </Routes>
