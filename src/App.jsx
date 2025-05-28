@@ -6,6 +6,9 @@ import Home from './pages/Home'
 import InvitePage from './pages/InvitePage'
 import TripDashboardPage from './pages/TripDashboardPage'
 import EditTripPage from './pages/EditTripPage'
+import TripsPage from './pages/TripsPage'
+import TripListPage from './pages/TripListPage'
+
 import AuthPage from './pages/AuthPage'
 
 
@@ -26,6 +29,9 @@ function App() {
           <Route path="/join-trip/:tripId" element={<JoinTripPage darkMode={darkMode} setDarkMode={setDarkMode} />} />
           <Route path="/trip/:tripId" element={<TripDashboardPage darkMode={darkMode} setDarkMode={setDarkMode} />} />
           <Route path="/trip/:tripId/edit" element={<EditTripPage darkMode={darkMode} setDarkMode={setDarkMode} />} />
+          <Route path="/trips" element={<TripsPage darkMode={darkMode} setDarkMode={setDarkMode} />} />
+          <Route path="/trips-list" element={<TripListPage darkMode={darkMode} setDarkMode={setDarkMode} />} />
+
           <Route path="/auth" element={<AuthPage darkMode={darkMode} setDarkMode={setDarkMode} />} />
 
 
