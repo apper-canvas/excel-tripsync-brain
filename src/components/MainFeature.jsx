@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom'
+
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { toast } from 'react-toastify'
@@ -5,6 +7,8 @@ import ApperIcon from './ApperIcon'
 import { format, addDays } from 'date-fns'
 
 const MainFeature = () => {
+  const navigate = useNavigate()
+
   const [activeTab, setActiveTab] = useState('dashboard')
   const [currentTrip, setCurrentTrip] = useState({
     name: 'Tokyo Adventure',
@@ -191,6 +195,7 @@ const MainFeature = () => {
                 ))}
               </div>
               <motion.button
+                onClick={() => navigate('/invite')}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center space-x-2 bg-accent text-white px-4 py-2 rounded-xl font-medium shadow-soft hover:shadow-lg transition-all duration-200"
@@ -198,6 +203,7 @@ const MainFeature = () => {
                 <ApperIcon name="UserPlus" className="w-4 h-4" />
                 <span className="hidden sm:inline">Invite</span>
               </motion.button>
+
             </div>
           </div>
         </div>
